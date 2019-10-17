@@ -1,0 +1,9 @@
+<div class="container">
+	<div class="row">
+		<% @fotos.each do |foto| %>
+			<div class="col-sm">
+				<% image_tag(url_for(foto.fotografia)) %>
+			</div>
+		<%end%>
+  </div>
+</div>

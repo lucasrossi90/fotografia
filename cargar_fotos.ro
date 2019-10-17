@@ -1,0 +1,7 @@
+@fotografias = Foto.all
+
+@fotografias.each do |foto|
+	numero = foto.id
+	foto.fotografia.attach(io: File.open("./storageFotos/fotoartistica" + numero.to_s + ".jpg"), filename: "fotoartistica" + numero.to_s + ".jpg", content_type: "image/jpg")
+	foto.save
+end

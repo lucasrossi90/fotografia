@@ -1,0 +1,50 @@
+<div><a href="/fotos"><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
+
+<div class="menuGeneral">
+	<div id="series">series</a></div>
+		<div id="menuSeries" style="display:none; margin-left:20px">
+			<a id="serieUno">serie A</a></a><br />
+		    <a id="serieDos">serie B</a><br />
+		</div>
+	<div><a href="/fotos">muestras</a></div>
+	<div><a href="/fotos">bio</a></div>
+	<div><a href="/fotos">contacto</a></div>
+	<div><a href="/fotos">links</a></div>
+</div>
+
+<div id="content"></div>
+
+
+<script language="javascript" type="text/javascript">
+	$("#series").click(function()
+	{	if ($("#menuSeries").css('display') == "none")
+				{$("#menuSeries").css('display', 'block');
+				 $("#series").css('font-weight', 'bold');
+		}
+		else
+			{$("#menuSeries").css('display','none');
+			 $("#series").css('font-weight', '400');
+		}
+
+	});
+
+    $("#serieUno").click(function() {
+          $.ajax({
+              type: 'GET',
+              url: '/fotos/serieUno',
+              data: {numero_serie: '1'}
+
+    	  });
+    });
+
+    $("#serieDos").click(function() {
+          $.ajax({
+              type: 'GET',
+              url: '/fotos/serieDos',
+              data: {numero_serie: '2'}
+
+    	  });
+    });
+
+</script>
+
