@@ -1,9 +1,16 @@
 <div class="container">
 	<div class="row">
-		<% @fotos.each do |foto| %>
-			<div class="col-sm">
-				<% image_tag(url_for(foto.fotografia)) %>
+		<% @fotos[0..3].each do |foto| %>
+			<div class="col-sm-3">
+					<%= image_tag(foto.url, style: "width:10%;height:10%") %>
 			</div>
 		<%end%>
-  </div>
+	</div>
+	<div class="row">
+		<% @fotos[4..7].each do |foto| %>
+			<div class="col-sm-3">
+					<%= image_tag(foto.url, style: "width:10%;height:10%") %>
+			</div>
+		<%end%>
+	</div>
 </div>
