@@ -10,4 +10,11 @@ class FotosController < ApplicationController
 		end
 	end
 
+	def mostrar_muestras
+		respond_to do |format|
+			format.js
+		end
+	end
+
+
 end

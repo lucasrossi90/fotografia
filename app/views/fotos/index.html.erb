@@ -1,15 +1,15 @@
-<div><a href="/fotos"><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
+<div><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
 
 <div class="menuGeneral">
 	<div id="series">series</a></div>
 		<div id="menuSeries" style="display:none; margin-left:20px">
-			<a id="serieUno">serie A</a></a><br />
-		    <a id="serieDos">serie B</a><br />
+			<div id="serieUno">serie A</div>
+		    <div id="serieDos">serie B</div>
 		</div>
-	<div><a href="/fotos">muestras</a></div>
-	<div><a href="/fotos">bio</a></div>
-	<div><a href="/fotos">contacto</a></div>
-	<div><a href="/fotos">links</a></div>
+	<div id="muestras">muestras</a></div>
+	<div id="bio">bio</a></div>
+	<div id="contacto">contacto</a></div>
+	<div id="links">links</a></div>
 </div>
 
 <div id="content">
@@ -20,13 +20,23 @@
 	$("#series").click(function()
 	{	if ($("#menuSeries").css('display') == "none")
 				{$("#menuSeries").css('display', 'block');
-				 $("#series").css('font-weight', 'bold');
+				 $("#series").css('font-weight', '550');
 		}
 		else
 			{$("#menuSeries").css('display','none');
 			 $("#series").css('font-weight', '400');
+			 $(".container-fotos").css('display','none');
 		}
+	});
 
+	$("#muestras").click(function()
+	{	if ($("#muestras").css('font-weight') == '400')
+				{$("#muestras").css('font-weight', '550');
+		}
+		else
+			{$("#muestras").css('font-weight', '400');
+			 $(".container-muestras").css('display','none');
+		}	
 	});
 
     $("#serieUno").click(function() {
@@ -42,6 +52,13 @@
               type: 'GET',
               url: '/fotos/serieDos',
               data: {numero_serie: '2'}
+    	  });
+    });
+
+    $("#muestras").click(function() {
+          $.ajax({
+              type: 'GET',
+              url: '/fotos/muestras'
     	  });
     });
 

@@ -1,15 +1,28 @@
-<div class="container">
-	<div class="row">
+<div class="container-fotos" style="display:none>
+<% if @fotos.first.serie == 1
+		nombreSerie = "la Vicky es la uno"
+	elsif @fotos.first.serie == 2
+		nombreSerie = "la Vicky de la gente"%>
+<%end%>
+<div id="titulo">serie: <%= nombreSerie %>
+</div>
+<div id="barra">
+</div>
+	<div>
 		<% @fotos[0..3].each do |foto| %>
-			<div class="col-sm-3">
-					<%= image_tag(foto.url, style: "width:10%;height:10%") %>
+			<div class="foto-container">
+					<div class="foto">
+					<%= image_tag(foto.url) %>
+					</div>
 			</div>
 		<%end%>
 	</div>
-	<div class="row">
+	<div>
 		<% @fotos[4..7].each do |foto| %>
-			<div class="col-sm-3">
-					<%= image_tag(foto.url, style: "width:10%;height:10%") %>
+			<div class="foto-container">
+					<div class="foto">
+					<%= image_tag(foto.url) %>
+					</div>
 			</div>
 		<%end%>
 	</div>
