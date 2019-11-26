@@ -16,5 +16,19 @@ class FotosController < ApplicationController
 		end
 	end
 
+	def mostrar_contacto
+		respond_to do |format|
+			format.js
+		end
+	end
+
+	def mostrar_bio
+		respond_to do |format|
+			format.js
+		end
+	end
+
+
+
 
 end

@@ -10,7 +10,15 @@ body {background-color: #ffe8ec}
 
 #content {    
 padding-left: 250px;
-margin-top: -50px;}
+margin-top: -50px;
+}
+
+#contentBioContacto {
+	margin-top: 80px;
+	margin-left: 10px;
+	width: 200px;
+
+}
 
 #titulo {
 	margin-bottom:5px;
@@ -66,4 +74,17 @@ margin-top: -50px;}
 .titulo-muestra {
 	font-weight: 550;
 	font-style: italic;
+}
+
+.menuGeneral, .titulo {
+	font-family: Baskervville;
+}
+
+.container-contacto {
+	font-family: Dancing Script;
+	border-top: solid;
+	border-left: solid;
+	border-color: black;
+	border-width: 1px;
+	padding: 10px;
 }

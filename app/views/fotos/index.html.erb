@@ -1,66 +1,151 @@
-<div><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
+<div class="titulo"><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
 
 <div class="menuGeneral">
-	<div id="series">series</a></div>
+	<div class="menu-item series-item" id="series">series</a></div>
 		<div id="menuSeries" style="display:none; margin-left:20px">
-			<div id="serieUno">serie A</div>
-		    <div id="serieDos">serie B</div>
+			<div class="menu-item series-item" id="serieUno">serie A</div>
+		    <div class="menu-item series-item" id="serieDos">serie B</div>
 		</div>
-	<div id="muestras">muestras</a></div>
-	<div id="bio">bio</a></div>
-	<div id="contacto">contacto</a></div>
-	<div id="links">links</a></div>
+	<div class="menu-item" id="muestras">muestras</a></div>
+	<div class="menu-item" id="bio">bio</a></div>
+	<div class="menu-item" id="contacto">contacto</a></div>
 </div>
 
 <div id="content">
 </div>
 
+<div id="contentBioContacto">
+</div>
+
 
 <script language="javascript" type="text/javascript">
 	$("#series").click(function()
-	{	if ($("#menuSeries").css('display') == "none")
-				{$("#menuSeries").css('display', 'block');
-				 $("#series").css('font-weight', '550');
-		}
-		else
-			{$("#menuSeries").css('display','none');
-			 $("#series").css('font-weight', '400');
-			 $(".container-fotos").css('display','none');
-		}
-	});
+	{	if ($("#series").hasClass('activo')){
+			$("#content").html("");
+    		$(".series-item").css('font-weight', '400');
+    		$(".series-item").css('font-style', 'normal');
+    		$(".series-item").removeClass("activo");
+    		$("#menuSeries").css("display", "none");
+	}
+		else {
+			$(".menu-item").removeClass("activo");
+    		$(".menu-item").css('font-weight', '400');
+    		$(".menu-item").css('font-style', 'normal');
 
-	$("#muestras").click(function()
-	{	if ($("#muestras").css('font-weight') == '400')
-				{$("#muestras").css('font-weight', '550');
+    		$("#series").addClass("activo");
+    		$("#menuSeries").css("display", "block");
+    		$("#series").css('font-weight', '550');
+    		$("#series").css('font-style', 'italic');
 		}
-		else
-			{$("#muestras").css('font-weight', '400');
-			 $(".container-muestras").css('display','none');
-		}	
 	});
 
     $("#serieUno").click(function() {
-          $.ajax({
+    	if ($("#serieUno").hasClass('activo')) {
+    		$("#content").html("");
+    		$("#serieUno").css('font-weight', '400');
+    		$("#serieUno").css('font-style', 'normal');
+    		$("#serieUno").removeClass("activo");
+    	}
+    	else {
+    		$(".menu-item").removeClass("activo");
+    		$(".menu-item").css('font-weight', '400');
+    		$(".menu-item").css('font-style', 'normal');
+
+    		$("#serieUno").addClass("activo");
+    		$("#serieUno").css('font-weight', '550');
+    		$("#serieUno").css('font-style', 'italic');
+
+    		$("#series").addClass("activo");
+    		$("#series").css('font-weight', '550');
+    		$("#series").css('font-style', 'italic');
+
+    		$.ajax({
               type: 'GET',
               url: '/fotos/serieUno',
               data: {numero_serie: '1'}
-    	  });
+    	  });	
+    	}
+          
     });
 
+   
     $("#serieDos").click(function() {
-          $.ajax({
+    	if ($("#serieDos").hasClass('activo')) {
+    		$("#content").html("");
+    		$("#serieDos").css('font-weight', '400');
+    		$("#serieDos").css('font-style', 'normal');
+    		$("#serieDos").removeClass("activo");
+    	}
+    	else {
+    		$(".menu-item").removeClass("activo");
+    		$(".menu-item").css('font-weight', '400');
+    		$(".menu-item").css('font-style', 'normal');
+
+    		$("#serieDos").addClass("activo");
+    		$("#serieDos").css('font-weight', '550');
+    		$("#serieDos").css('font-style', 'italic');
+
+    		$("#series").addClass("activo");
+    		$("#series").css('font-weight', '550');
+    		$("#series").css('font-style', 'italic');
+
+    		$.ajax({
               type: 'GET',
               url: '/fotos/serieDos',
-              data: {numero_serie: '2'}
-    	  });
+              data: {numero_serie: '1'}
+    	  });	
+    	}
+          
     });
 
     $("#muestras").click(function() {
-          $.ajax({
-              type: 'GET',
-              url: '/fotos/muestras'
+    	if ($("#muestras").hasClass("activo")) {
+    		$("#content").html("");
+    		$("#muestras").css('font-weight', '400');
+    		$("#muestras").css('font-style', 'normal');
+    		$(this).removeClass("activo");
+    	}
+    	else {
+    		$(".menu-item").removeClass("activo");
+    		$(".menu-item").css('font-weight', '400');
+    		$(".menu-item").css('font-style', 'normal');
+    		$("#menuSeries").css("display", "none");
+
+    		$("#muestras").addClass("activo");
+    		$("#muestras").css('font-weight', '550');
+    		$("#muestras").css('font-style', 'italic');
+
+    		$.ajax({
+            type: 'GET',
+            url: '/fotos/muestras'
     	  });
+    	}
     });
+
+    $("#contacto").click(function() {
+    	if ($("#contacto").hasClass("activo")) {
+    		$("#contentBioContacto").html("");
+    		$("#contacto").css('font-weight', '400');
+    		$("#contacto").css('font-style', 'normal');
+    		$(this).removeClass("activo");
+    	}
+    	else {
+    		$(".menu-item").removeClass("activo");
+    		$(".menu-item").css('font-weight', '400');
+    		$(".menu-item").css('font-style', 'normal');
+    		$("#menuSeries").css("display", "none");
+
+    		$("#contacto").addClass("activo");
+    		$("#contacto").css('font-weight', '550');
+    		$("#contacto").css('font-style', 'italic');
+
+    		$.ajax({
+            type: 'GET',
+            url: '/fotos/contacto'
+    	  });
+    	}
+    });
+
 
 </script>
 
