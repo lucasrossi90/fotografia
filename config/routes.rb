@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	root :to => 'fotos#index'
 	get 'fotos/serieUno', to: 'fotos#mostrar_serie'
 	get 'fotos/serieDos', to: 'fotos#mostrar_serie'
 	get 'fotos/muestras', to: 'fotos#mostrar_muestras'
