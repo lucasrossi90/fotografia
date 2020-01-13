@@ -33,9 +33,6 @@ margin-top: -50px;
   margin-left: 0px;
 }
 
-.rowFoto {
-  padding: 100px;
-}
 
 .foto {
 	display: inline-block;
@@ -101,6 +98,7 @@ margin: 15px 20px 20px 20px;
 .lightbox-target {
 position: fixed;
 top: -100%;
+left: 0%;
 width: 100%;
 background: rgba(0,0,0,.7);
 width: 100%;
@@ -194,8 +192,8 @@ bottom: 0;
 }
 
 .lightbox-target:target img {
-max-height: 75%;
-max-width: 75%;
+max-height: 80%;
+max-width: 80%;
 }
 
 .lightbox-target:target a.lightbox-close {

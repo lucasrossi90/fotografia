@@ -28,6 +28,7 @@
     		$("#menuSeries").css("display", "none");
 	}
 		else {
+			$("#contentBioContacto").html("");
 			$(".menu-item").removeClass("activo");
     		$(".menu-item").css('font-weight', '400');
     		$(".menu-item").css('font-style', 'normal');
@@ -47,6 +48,8 @@
     		$("#serieUno").removeClass("activo");
     	}
     	else {
+    		$("#contentBioContacto").html("");
+
     		$(".menu-item").removeClass("activo");
     		$(".menu-item").css('font-weight', '400');
     		$(".menu-item").css('font-style', 'normal');
@@ -77,6 +80,8 @@
     		$("#serieDos").removeClass("activo");
     	}
     	else {
+    		$("#contentBioContacto").html("");
+
     		$(".menu-item").removeClass("activo");
     		$(".menu-item").css('font-weight', '400');
     		$(".menu-item").css('font-style', 'normal');
@@ -103,9 +108,10 @@
     		$("#content").html("");
     		$("#muestras").css('font-weight', '400');
     		$("#muestras").css('font-style', 'normal');
-    		$(this).removeClass("activo");
+    		$("#muestras").removeClass("activo");
     	}
     	else {
+    		$("#contentBioContacto").html("");
     		$(".menu-item").removeClass("activo");
     		$(".menu-item").css('font-weight', '400');
     		$(".menu-item").css('font-style', 'normal');
@@ -127,9 +133,10 @@
     		$("#contentBioContacto").html("");
     		$("#contacto").css('font-weight', '400');
     		$("#contacto").css('font-style', 'normal');
-    		$(this).removeClass("activo");
+    		$("#contacto").removeClass("activo");
     	}
     	else {
+    		$("#content").html("");
     		$(".menu-item").removeClass("activo");
     		$(".menu-item").css('font-weight', '400');
     		$(".menu-item").css('font-style', 'normal');
