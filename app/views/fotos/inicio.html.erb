@@ -1,0 +1,13 @@
+<div id="foto-inicio">
+	<%= image_tag("https://fotoweinmann.s3-sa-east-1.amazonaws.com/inicio/inicio.jpg") %>
+</div>
+
+<script language="javascrip" type="text/javascript">
+	$("img").click(function() {
+        		$.ajax({
+            type: 'GET',
+            url: '/fotos'
+    	  });
+    	});
+
+</script>
