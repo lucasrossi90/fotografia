@@ -33,4 +33,17 @@
 					</div>
 		<%end%>
 	</div>
+	<div class="rowFoto">
+		<% @fotos[7..10].each do |foto | %>
+			<div class="foto-container">
+						<a class="lightbox" href="<%= '#fotoSerie' + foto.url_preview.slice(60..62) %>" data-turbolinks="false">
+	   						<%= image_tag(foto.url_preview) %>
+	   					</a>
+	   					<div class="lightbox-target" id="<%= 'fotoSerie' + foto.url_preview.slice(60..62) %>">
+	   						<%= image_tag(foto.url_final) %>
+	   							<a class="lightbox-close" href="#" data-turbolinks="false" ></a>
+						</div>					
+					</div>
+		<%end%>
+	</div>
 </div>
