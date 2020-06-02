@@ -10,11 +10,26 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-  *= require_self
+ *= require lightbox
+ *= require_self
  *= require_tree .
 
 
  */
 
   @import "bootstrap";
+
+  @font-face {
+   font-family: 'Stanley';
+   src: font-url('Stanley.otf') format("truetype");
+   font-weight: normal;
+  font-style: normal;
+}
+
+  @font-face {
+   font-family: 'Fenix';
+   src: font-url('Fenix-Regular.ttf') format("truetype");
+   font-weight: normal;
+  font-style: normal;
+}
 

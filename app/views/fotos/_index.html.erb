@@ -1,12 +1,11 @@
-<div class="titulo"><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
+<div class="titulo"><a href= ><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
 
 <div class="menuGeneral">
 	<div class="menu-item series-item" id="series">series</a></div>
 		<div id="menuSeries" style="display:none; margin-left:20px">
-			<div class="menu-item series-item" id="serieUno">serie A</div>
-		    <div class="menu-item series-item" id="serieDos">serie B</div>
+			<div class="menu-item series-item" id="serieUno">vistas</div>
+		    <div class="menu-item series-item" id="serieDos">tesis</div>
 		</div>
-	<div class="menu-item" id="muestras">muestras</a></div>
 	<div class="menu-item" id="bio">bio</a></div>
 	<div class="menu-item" id="contacto">contacto</a></div>
 </div>
@@ -35,7 +34,7 @@
 
     		$("#series").addClass("activo");
     		$("#menuSeries").css("display", "block");
-    		$("#series").css('font-weight', '550');
+    		$("#series").css('font-weight', 'bold');
     		$("#series").css('font-style', 'italic');
 		}
 	});
@@ -54,11 +53,11 @@
     		$(".menu-item").css('font-style', 'normal');
 
     		$("#serieUno").addClass("activo");
-    		$("#serieUno").css('font-weight', '550');
+    		$("#serieUno").css('font-weight', 'bold');
     		$("#serieUno").css('font-style', 'italic');
 
     		$("#series").addClass("activo");
-    		$("#series").css('font-weight', '550');
+    		$("#series").css('font-weight', 'bold');
     		$("#series").css('font-style', 'italic');
 
     		$.ajax({
@@ -85,11 +84,11 @@
     		$(".menu-item").css('font-style', 'normal');
 
     		$("#serieDos").addClass("activo");
-    		$("#serieDos").css('font-weight', '550');
+    		$("#serieDos").css('font-weight', 'bold');
     		$("#serieDos").css('font-style', 'italic');
 
     		$("#series").addClass("activo");
-    		$("#series").css('font-weight', '550');
+    		$("#series").css('font-weight', 'bold');
     		$("#series").css('font-style', 'italic');
 
     		$.ajax({
@@ -116,7 +115,7 @@
     		$("#menuSeries").css("display", "none");
 
     		$("#muestras").addClass("activo");
-    		$("#muestras").css('font-weight', '550');
+    		$("#muestras").css('font-weight', 'bold');
     		$("#muestras").css('font-style', 'italic');
 
     		$.ajax({
@@ -141,7 +140,7 @@
     		$("#menuSeries").css("display", "none");
 
     		$("#contacto").addClass("activo");
-    		$("#contacto").css('font-weight', '550');
+    		$("#contacto").css('font-weight', 'bold');
     		$("#contacto").css('font-style', 'italic');
 
     		$.ajax({
@@ -154,4 +153,6 @@
 
 
 </script>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
