@@ -1,12 +1,12 @@
-<div class="container-fotos">
+<div class="container-fotos-vistas">
 <% if @fotos.first.serie == "1" then nombreSerie = "vistas" %>
 
 <div class="titulo">serie <b>"<%= nombreSerie %>"</b>
 </div>
 <div id="barra">
 </div>
-	<div class="rowFoto row-primera">
-		<% @fotos[0..1].each do |foto | %>
+	<div class="rowFoto">
+		<% @fotos[0..3].each do |foto | %>
 			<div class="foto-container">
 			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 					<%= image_tag(foto.url_preview) %>
@@ -15,23 +15,12 @@
 		<%end%>
 	</div>
 	<div class="rowFoto">
-		<% @fotos[2..4].each do |foto | %>
+		<% @fotos[4..7].each do |foto | %>
 			<div class="foto-container">
 			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 					<%= image_tag(foto.url_preview) %>
 				</a>
 			</div>		
-		<%end%>
-	</div>
-	<div class="rowFoto">
-		<% @fotos[5..7].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-					</a>
-				</div>		
-			</div>
 		<%end%>
 	</div>
 	<div class="rowFoto row-ultima">
@@ -45,9 +34,11 @@
 			</div>
 		<%end%>
 	</div>
+</div>
 
 <% elsif @fotos.first.serie == "2" then nombreSerie = "tesis" %>
 
+<div class="container-fotos-tesis">
 <div class="titulo">serie <b>"<%= nombreSerie %>"</b>
 </div>
 <div id="barra">
@@ -126,3 +117,4 @@
 		<%end%>
 	</div>
 <% end %>
+</div>

@@ -1,13 +1,15 @@
-<div class="titulo"><a href= ><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
+<div class="container-menu">
+    <div class="titulo"><a href= ><strong>VICTORIA WEINMANN</strong> fotografia</a></div>
 
-<div class="menuGeneral">
-	<div class="menu-item series-item" id="series">series</a></div>
-		<div id="menuSeries" style="display:none; margin-left:20px">
-			<div class="menu-item series-item" id="serieUno">vistas</div>
-		    <div class="menu-item series-item" id="serieDos">tesis</div>
-		</div>
-	<div class="menu-item" id="bio">bio</a></div>
-	<div class="menu-item" id="contacto">contacto</a></div>
+    <div class="menuGeneral">
+    	<div class="menu-item series-item" id="series">series</a></div>
+    		<div id="menuSeries" style="display:none; margin-left:20px">
+    			<div class="menu-item series-item" id="serieUno">vistas</div>
+    		    <div class="menu-item series-item" id="serieDos">tesis</div>
+    		</div>
+    	<div class="menu-item" id="bio">bio</a></div>
+    	<div class="menu-item" id="contacto">contacto</a></div>
+    </div>
 </div>
 
 <div id="content">
@@ -100,12 +102,12 @@
           
     });
 
-    $("#muestras").click(function() {
-    	if ($("#muestras").hasClass("activo")) {
+    $("#bio").click(function() {
+    	if ($("#bio").hasClass("activo")) {
     		$("#content").html("");
-    		$("#muestras").css('font-weight', '400');
-    		$("#muestras").css('font-style', 'normal');
-    		$("#muestras").removeClass("activo");
+    		$("#bio").css('font-weight', '400');
+    		$("#bio").css('font-style', 'normal');
+    		$("#bio").removeClass("activo");
     	}
     	else {
     		$("#content, #contentBioContacto").html("");
@@ -114,13 +116,13 @@
     		$(".menu-item").css('font-style', 'normal');
     		$("#menuSeries").css("display", "none");
 
-    		$("#muestras").addClass("activo");
-    		$("#muestras").css('font-weight', 'bold');
-    		$("#muestras").css('font-style', 'italic');
+    		$("#bio").addClass("activo");
+    		$("#bio").css('font-weight', 'bold');
+    		$("#bio").css('font-style', 'italic');
 
     		$.ajax({
             type: 'GET',
-            url: '/fotos/muestras'
+            url: '/fotos/bio'
     	  });
     	}
     });
