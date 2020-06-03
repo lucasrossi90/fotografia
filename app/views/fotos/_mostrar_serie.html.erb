@@ -1,7 +1,7 @@
-<div class="container-fotos-vistas">
 <% if @fotos.first.serie == "1" then nombreSerie = "vistas" %>
 
-<div class="titulo">serie <b>"<%= nombreSerie %>"</b>
+<div class="container-fotos-vistas">
+<div class="titulo">serie <b><%= nombreSerie %></b>
 </div>
 <div id="barra">
 </div>
@@ -39,7 +39,7 @@
 <% elsif @fotos.first.serie == "2" then nombreSerie = "tesis" %>
 
 <div class="container-fotos-tesis">
-<div class="titulo">serie <b>"<%= nombreSerie %>"</b>
+<div class="titulo">serie <b><%= nombreSerie %></b>
 </div>
 <div id="barra">
 </div>

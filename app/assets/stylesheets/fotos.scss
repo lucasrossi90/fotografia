@@ -41,16 +41,19 @@ margin: 15px 20px 20px 20px;
 
 .container-menu {
 	margin-left: 20px;
+	position: fixed;
 }
 
 .container-fotos-vistas {
 	width: 1000px;
-	margin: auto;
+	margin: 70px;
+	position: absolute;
 }
 
 .container-fotos-tesis {
 	width: 1000px;
-	margin: auto;
+	margin: 70px;
+	position: absolute;
 }
 
 #titulo {
@@ -114,13 +117,15 @@ margin: 15px 20px 20px 20px;
 
 .container-contacto {
 	font-family: Fenix;
-	font-size: large;
+	font-size: medium;
 	border-top: solid;
 	border-left: solid;
 	border-width: 80%;
 	border-color: black;
 	border-width:0.5px;
 	padding: 10px;
+	position: absolute;
+	margin-top: 150px;
 }
 
 
@@ -142,8 +147,9 @@ margin: 15px 20px 20px 20px;
 
 .container-bio {
 	width: 300px;
-	margin: 40px;
+	margin: 90px;
 	font-family: Fenix;
+	position: absolute;
 }
 
 #bio-texto {
