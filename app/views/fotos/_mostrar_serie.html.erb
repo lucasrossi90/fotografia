@@ -1,12 +1,13 @@
 <% if @fotos.first.serie == "1" then nombreSerie = "vistas" %>
 
 <div class="container-fotos-vistas">
+
 <div class="titulo">serie <b><%= nombreSerie %></b>
 </div>
 <div id="barra">
 </div>
 	<div class="rowFoto">
-		<% @fotos[0..3].each do |foto | %>
+		<% @fotos[0..2].each do |foto | %>
 			<div class="foto-container">
 			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 					<%= image_tag(foto.url_preview) %>
@@ -15,7 +16,7 @@
 		<%end%>
 	</div>
 	<div class="rowFoto">
-		<% @fotos[4..7].each do |foto | %>
+		<% @fotos[3..5].each do |foto | %>
 			<div class="foto-container">
 			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 					<%= image_tag(foto.url_preview) %>
@@ -23,8 +24,19 @@
 			</div>		
 		<%end%>
 	</div>
+	<div class="rowFoto">
+		<% @fotos[6..8].each do |foto | %>
+			<div class="foto-container">
+				<div class="foto-container">
+					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+					<%= image_tag(foto.url_preview) %>
+					</a>
+				</div>		
+			</div>
+		<%end%>
+	</div>
 	<div class="rowFoto row-ultima">
-		<% @fotos[8..10].each do |foto | %>
+	<% @fotos[9..9].each do |foto | %>
 			<div class="foto-container">
 				<div class="foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
@@ -44,7 +56,7 @@
 <div id="barra">
 </div>
 	<div class="rowFoto">
-		<% @fotos[0..3].each do |foto | %>
+		<% @fotos[0..2].each do |foto | %>
 			<div class="foto-container">
 			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 					<%= image_tag(foto.url_preview) %>
@@ -53,7 +65,7 @@
 		<%end%>
 	</div>
 	<div class="rowFoto">
-		<% @fotos[4..7].each do |foto | %>
+		<% @fotos[3..5].each do |foto | %>
 			<div class="foto-container">
 			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 					<%= image_tag(foto.url_preview) %>
@@ -62,7 +74,7 @@
 		<%end%>
 	</div>
 	<div class="rowFoto">
-		<% @fotos[7..10].each do |foto | %>
+		<% @fotos[6..8].each do |foto | %>
 			<div class="foto-container">
 				<div class="foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
@@ -73,7 +85,7 @@
 		<%end%>
 	</div>
 	<div class="rowFoto">
-		<% @fotos[11..14].each do |foto | %>
+	<% @fotos[9..11].each do |foto | %>
 			<div class="foto-container">
 				<div class="foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
@@ -84,7 +96,7 @@
 		<%end%>
 	</div>
 	<div class="rowFoto">
-		<% @fotos[15..18].each do |foto | %>
+		<% @fotos[12..14].each do |foto | %>
 			<div class="foto-container">
 				<div class="foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
@@ -95,7 +107,29 @@
 		<%end%>
 	</div>
 	<div class="rowFoto">
-		<% @fotos[19..22].each do |foto | %>
+	<% @fotos[15..17].each do |foto | %>
+			<div class="foto-container">
+				<div class="foto-container">
+					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+					<%= image_tag(foto.url_preview) %>
+					</a>
+				</div>	
+			</div>
+		<%end%>
+	</div>
+	<div class="rowFoto">
+		<% @fotos[18..20].each do |foto | %>
+			<div class="foto-container">
+				<div class="foto-container">
+					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+					<%= image_tag(foto.url_preview) %>
+					</a>
+				</div>	
+			</div>
+		<%end%>
+	</div>
+	<div class="rowFoto">
+		<% @fotos[21..23].each do |foto | %>
 			<div class="foto-container">
 				<div class="foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
@@ -106,7 +140,7 @@
 		<%end%>
 	</div>
 	<div class="rowFoto ultima-row-serie-tesis">
-		<% @fotos[23..26].each do |foto | %>
+		<% @fotos[24..26].each do |foto | %>
 			<div class="foto-container">
 				<div class="foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">

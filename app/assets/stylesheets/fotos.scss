@@ -12,9 +12,9 @@ text-decoration:none;
 
 body {background-color: #ffe8ec}
 
-#menuSeries {margin-left: 20px}
+#menuSeries {margin-left: 15px}
 
-.menuGeneral {margin-left: 30px;
+.menuGeneral {margin-left: 25px;
 cursor: pointer;}
 
 #content {    
@@ -45,14 +45,16 @@ margin: 15px 20px 20px 20px;
 }
 
 .container-fotos-vistas {
-	width: 1000px;
-	margin: 70px;
+	width: 800px;
+	margin-top: 90px;
+	margin-left: 120px;
 	position: absolute;
 }
 
 .container-fotos-tesis {
-	width: 1000px;
-	margin: 70px;
+	width: 800px;
+	margin-top: 90px;
+	margin-left: 120px;
 	position: absolute;
 }
 
@@ -110,9 +112,14 @@ margin: 15px 20px 20px 20px;
 	font-style: italic;
 }
 
-.menuGeneral, .titulo {
+.menuGeneral {
 	font-family: Fenix;
-	font-size: larger;
+	font-size: medium;
+}
+
+.titulo {
+	font-family: Fenix;
+	font-size: large;
 }
 
 .container-contacto {
@@ -142,7 +149,7 @@ margin: 15px 20px 20px 20px;
 }
 
 .ultima-row-serie-tesis {
-	padding-left: 140px;
+	padding-left: 120px;
 }
 
 .container-bio {
