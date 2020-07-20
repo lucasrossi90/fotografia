@@ -2,10 +2,10 @@
 
 <% if @fotos.first.serie == "1" then nombreSerie = "vistas" %>
 
-		<div class="titulo">serie <b><%= nombreSerie %></b>
-		</div>
-		<div id="barra">
-		</div>
+		<div class="titulo">serie <b><%= nombreSerie %></b></div>
+
+		<div id="barra"></div>
+
 			<div class="row rowFoto">
 				<% @fotos[0..2].each do |foto | %>
 					<div class="col-sm-3 foto-container">
@@ -51,105 +51,105 @@
 
 <% elsif @fotos.first.serie == "2" then nombreSerie = "tesis" %>
 
-<div class="container-fotos-tesis">
-<div class="titulo">serie <b><%= nombreSerie %></b>
-</div>
-<div id="barra">
-</div>
-	<div class="rowFoto">
-		<% @fotos[0..2].each do |foto | %>
-			<div class="foto-container">
-			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-				</a>
-			</div>					
-		<%end%>
-	</div>
-	<div class="rowFoto">
-		<% @fotos[3..5].each do |foto | %>
-			<div class="foto-container">
-			<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-				</a>
-			</div>		
-		<%end%>
-	</div>
-	<div class="rowFoto">
-		<% @fotos[6..8].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
+	<div class="titulo">serie <b><%= nombreSerie %></b></div>
+
+	<div id="barra"></div>
+
+		<div class="row rowFoto">
+			<% @fotos[0..2].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+				<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
 					</a>
-				</div>	
-			</div>
-		<%end%>
-	</div>
-	<div class="rowFoto">
-	<% @fotos[9..11].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
+				</div>					
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+			<% @fotos[3..5].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+				<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
 					</a>
-				</div>	
-			</div>
-		<%end%>
+				</div>		
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+			<% @fotos[6..8].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+					<div class="foto-container">
+						<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
+						</a>
+					</div>	
+				</div>
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+		<% @fotos[9..11].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+					<div class="foto-container">
+						<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
+						</a>
+					</div>	
+				</div>
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+			<% @fotos[12..14].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+					<div class="foto-container">
+						<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
+						</a>
+					</div>	
+				</div>
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+		<% @fotos[15..17].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+					<div class="foto-container">
+						<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
+						</a>
+					</div>	
+				</div>
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+			<% @fotos[18..20].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+					<div class="foto-container">
+						<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
+						</a>
+					</div>	
+				</div>
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+			<% @fotos[21..23].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+					<div class="foto-container">
+						<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
+						</a>
+					</div>	
+				</div>
+			<%end%>
+		</div>
+		<div class="row rowFoto">
+			<div class="col-sm-2"></div>
+			<% @fotos[24..26].each do |foto | %>
+				<div class="col-sm-3 foto-container">
+					<div class="foto-container">
+						<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
+						<%= image_tag(foto.url_preview) %>
+						</a>
+					</div>	
+				</div>
+			<%end%>
+		</div>
+	<% end %>
 	</div>
-	<div class="rowFoto">
-		<% @fotos[12..14].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-					</a>
-				</div>	
-			</div>
-		<%end%>
-	</div>
-	<div class="rowFoto">
-	<% @fotos[15..17].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-					</a>
-				</div>	
-			</div>
-		<%end%>
-	</div>
-	<div class="rowFoto">
-		<% @fotos[18..20].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-					</a>
-				</div>	
-			</div>
-		<%end%>
-	</div>
-	<div class="rowFoto">
-		<% @fotos[21..23].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-					</a>
-				</div>	
-			</div>
-		<%end%>
-	</div>
-	<div class="rowFoto ultima-row-serie-tesis">
-		<% @fotos[24..26].each do |foto | %>
-			<div class="foto-container">
-				<div class="foto-container">
-					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
-					<%= image_tag(foto.url_preview) %>
-					</a>
-				</div>	
-			</div>
-		<%end%>
-	</div>
-<% end %>
-</div>
