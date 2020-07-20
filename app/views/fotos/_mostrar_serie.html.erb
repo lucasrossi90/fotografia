@@ -1,14 +1,12 @@
 <% if @fotos.first.serie == "1" then nombreSerie = "vistas" %>
 
-	<div class="row">
-	<div class="col-sm-6">
 		<div class="titulo">serie <b><%= nombreSerie %></b>
 		</div>
 		<div id="barra">
 		</div>
 			<div class="row rowFoto">
 				<% @fotos[0..2].each do |foto | %>
-					<div class="col-sm-2 foto-container">
+					<div class="col-sm-3 foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 							<%= image_tag(foto.url_preview) %>
 						</a>
@@ -17,7 +15,7 @@
 			</div>
 			<div class="row rowFoto">
 				<% @fotos[3..5].each do |foto | %>
-					<div class="col-sm-2 foto-container">
+					<div class="col-sm-3 foto-container">
 					<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 							<%= image_tag(foto.url_preview) %>
 						</a>
@@ -26,7 +24,7 @@
 			</div>
 			<div class="row rowFoto">
 				<% @fotos[6..8].each do |foto | %>
-					<div class="col-sm-2 foto-container">
+					<div class="col-sm-3 foto-container">
 						<div class="foto-container">
 							<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 							<%= image_tag(foto.url_preview) %>
@@ -37,7 +35,7 @@
 			</div>
 			<div class="row rowFoto row-ultima">
 			<% @fotos[9..9].each do |foto | %>
-						<div class="col-sm-2 foto-container">
+						<div class="col-sm-3 foto-container">
 							<a data-lightbox="serie" class="foto-preview" href="<%=foto.url_final%>" data-turbolinks="false">
 							<%= image_tag(foto.url_preview) %>
 							</a>
